@@ -109,7 +109,7 @@ body{
     position: -webkit-sticky;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 999;
     box-shadow: 0 5px 15px 0 #1e0035;
     background-color: #0D021A;
     .t-top-bar{
@@ -148,10 +148,12 @@ body{
         .header-search{
             .f-top-search{
                 margin: 0 auto;
-                border: 1px solid rgba(219,219,219,.5);
+                border: 1px solid rgba(255,255,255,.1);
                 border-radius: 20px;
+                background-color: #281944;
                 span{  
                     font-size: 1em;
+                    
                     a{
                         i{
                             cursor: pointer;
@@ -165,6 +167,7 @@ body{
                         line-height: 34px;
                         border: none;
                         background-color: transparent;
+                        color: rgba(219,219,219,.5);
                         &:focus{
                             outline: none;
                         }
@@ -214,13 +217,13 @@ body{
                 .t-upload{
                     text-decoration: none;
                     i{
-                        color: #928e8e; 
+                        color: #fff; 
                     }
                 }
                 .t-noti{
                     text-decoration: none;
                     i{
-                        color: #928e8e; 
+                        color: #fff; 
                     }     
                 }
                 .t-login{
@@ -234,7 +237,7 @@ body{
                         margin-left: .5em;
                         font-size: .7em;
                         font-weight: 600;
-                        color: #32323d;
+                        color: #fff;
                     }
                 }
     
@@ -251,11 +254,14 @@ body{
                 line-height: 50px;
                 .t-item-menu{
                     cursor: pointer;
-                    font-size: 1em;
+                    font-size: .9em;
                     text-decoration: none;
-                    color: #fff;
+                    color: #6e55b4;
                     font-weight: 600;
                     margin-left: .7em;
+                    +.t-item-menu{
+                        color: #fff;
+                    }
                     &:hover{
                         color: #6e55b4;
                     }
@@ -644,6 +650,7 @@ body{
                             .t-cards{
                                 @include flex-rowORcol(row){
                                     justify-content: space-between;
+                                    align-items: center;
                                 }
                                 .avatar{
                                     border-radius: 50%;
@@ -822,7 +829,43 @@ body{
                     cursor: default;
                     position: relative;
                     padding: 10px;
+                    z-index: 887;
+                    &:hover{
+                        .content-song{
+                            .mic-extend{
+                                display: block;
+                                .t-mic{
+                                    border-radius: 50%;
+                                    background-color:rgba(255,255,255,.101961);
+                                }
+                                .t-extend{
+                                    border-radius: 50%;
+                                    background-color:rgba(255,255,255,.101961); 
+                                }
+                            }
+                            .t-img-sing{
+                                .opac-img{
+                                    display: block;
+                                }
+                            }
+                        }
+                        .item-opac{
+                            display: block;
+                        }
+                    }
+                    .item-opac{
+                        display: none;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        background-color: rgba(255,255,255,.1);
+                        z-index: 444;
+                        border-radius: 5px;
+                    }
                     .content-song{
+                        z-index: 555;
                         height: 40px;
                         width: 100%;
                         flex-wrap: nowrap;
@@ -831,12 +874,10 @@ body{
                             align-items: center;
                         }
                     }
-                    .item-opac{
-                        
-                    }
                     .t-img-sing{
                         width: 40px;
                         border-radius: 5px;
+                        position: relative;
                         cursor: pointer;
                         a{
                             img{
@@ -844,13 +885,21 @@ body{
                                 border-radius: 5px;
                             }
                         }
+                        .opac-img{
+                            display: none;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            a{
+                                color: #fff;
+                                font-size: 11px;
+                            }
+                        }
                     }
                     .t-center{
                         flex-grow: 1;
                         padding-left: 15px;
-                    }
-                    .t-right{
-                        flex-grow: 2;
                     }
                     .t-name-song{
                         .t-song{
@@ -868,17 +917,15 @@ body{
                             }
                         }
                     }
+                    
+                    .t-right{
+                        flex-grow: 2;
+                    }
                     .mic-extend{
-                        background-color: #2a1b39;
+                        display: none;
                         text-align: right;
                         .t-mic-extend{
                             padding: 5px;
-                        }
-                        %hover-mic-extend{
-                            &:hover{
-                                border-radius: 50%;
-                                background-color:rgba(255,255,255,.101961);
-                            }
                         }
                         .t-mic{
                             @extend %display-inline-block;
@@ -886,7 +933,10 @@ body{
                             height:30px;
                             line-height: 30px;
                             text-align: center;
-                            @extend %hover-mic-extend;
+                            &:hover{
+                                border-radius: 50%;
+                                background-color:rgba(255,255,255,.101961);
+                            }
                             a{
                                 color: #fff;
                                 font-size: 11px;
@@ -898,10 +948,13 @@ body{
                             height:30px;
                             line-height: 30px;
                             text-align: center;
-                            @extend %hover-mic-extend;
                             a{
                                 color: #fff;
                                 font-size: 11px;
+                            }
+                            &:hover{
+                                border-radius: 50%;
+                                background-color:rgba(255,255,255,.101961);
                             }
                         }
                     }
