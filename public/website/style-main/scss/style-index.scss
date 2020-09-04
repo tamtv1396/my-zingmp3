@@ -20,6 +20,11 @@ body{
     font-weight: 400;
     overscroll-behavior: none;
 }
+%hiden-a{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
 %display-inline-block{
     display: inline-block;
     vertical-align: middle;
@@ -117,6 +122,7 @@ body{
         .flex-top{
             @include flex-rowORcol(row){
                 justify-content: space-between;
+                align-items: center;
             };
             margin-top: 1.5em;
             .flex-item-1{
@@ -135,7 +141,7 @@ body{
         .logo{
             .t-logo{
                 width: 100px;
-                background-image: url('../../img/logo-mp-3.svg');
+                background-image: url('../../image-main-page/logo-mp-3.svg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -147,13 +153,11 @@ body{
         }
         .header-search{
             .f-top-search{
-                margin: 0 auto;
                 border: 1px solid rgba(255,255,255,.1);
-                border-radius: 20px;
+                border-radius: 30px;
                 background-color: #281944;
                 span{  
                     font-size: 1em;
-                    
                     a{
                         i{
                             cursor: pointer;
@@ -168,6 +172,8 @@ body{
                         border: none;
                         background-color: transparent;
                         color: rgba(219,219,219,.5);
+                        padding: 5px 0 5px 10px;
+                        font-size: 1em;
                         &:focus{
                             outline: none;
                         }
@@ -235,7 +241,7 @@ body{
                     }
                     span{
                         margin-left: .5em;
-                        font-size: .7em;
+                        font-size: .9em;
                         font-weight: 600;
                         color: #fff;
                     }
@@ -254,19 +260,20 @@ body{
                 line-height: 50px;
                 .t-item-menu{
                     cursor: pointer;
-                    font-size: .9em;
+                    font-size: 1em;
                     text-decoration: none;
                     color: #6e55b4;
                     font-weight: 600;
-                    margin-left: .7em;
                     +.t-item-menu{
                         color: #fff;
+                        margin-left: .7em;
                     }
                     &:hover{
                         color: #6e55b4;
                     }
                 }
                 .t-vip{
+                    @extend %hiden-a;
                     width: 50px;
                     height: 25px;
                     background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v0.1.28/images/VIP-1x.svg) ;
@@ -276,7 +283,6 @@ body{
         }
     }
 }
-
 // home
 .t-main{
     display: block; 
@@ -307,6 +313,7 @@ body{
                 };
                 .ic-mp3{
                     background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v0.1.28/images/logo-mp-3.png);
+                    @extend %hiden-a;
                     @extend %t-bg-img;
                     display: block;
                     width: 50px;
