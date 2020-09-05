@@ -5,7 +5,7 @@ export default function MenuTop() {
     return (
         <div className=" flx-menu">
             <a className="t-item-menu" href="haba">TRANG CHỦ</a>
-            <a className="t-item-menu" href="haba">ZINGCHART</a>
+            <a className="t-item-menu" href="haba">#ZINGCHART</a>
             <a className="t-item-menu" href="haba">MỚI PHÁT HÀNH</a>
             <a className="t-item-menu" href="haba">TOP 100</a>
             <a className="t-item-menu" href="haba">CHỦ ĐỀ</a>
