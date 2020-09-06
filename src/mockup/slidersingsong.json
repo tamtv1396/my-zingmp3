@@ -1,0 +1,33 @@
+[
+    {
+        "id": 0 ,
+        "imgsinger":"https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/5/9/7/c/597c5594c732d3857de91b16156f7f32.jpg",
+        "song":"Họa mây",
+        "singer":"X2X",
+        "ranknumber":"#1",
+        "date":"28.9.2020",
+        "path":"/hoa-may",
+        "zingchoice":"zingchoice"
+    },
+    {
+        "id": 1 ,
+        "imgsinger":"https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/b/0/f/2/b0f2617eac4b87fd0affe726bfd81a0a.jpg",
+        "song":"Bỏ lỡ một người",
+        "singer":"Lê Bảo Bình",
+        "ranknumber":"#2",
+        "date":"28.9.2020",
+        "path":"/le-bao-binh",
+        "zingchoice":"zingchoice"
+    },
+    {
+        "id": 2 ,
+        "imgsinger":"https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/6/d/d/a/6dda1e6d7690c4c43ed97d6150619495.jpg",
+        "song":"Ai mang cô đơn đi",
+        "singer":"KICM, APJ",
+        "ranknumber":"#3",
+        "date":"28.9.2020",
+        "path":"/kicm-apj",
+        "zingchoice":"zingchoice"
+    }
+    
+]
