@@ -20,6 +20,11 @@ body{
     font-weight: 400;
     overscroll-behavior: none;
 }
+%hiden-a{
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
 %display-inline-block{
     display: inline-block;
     vertical-align: middle;
@@ -78,7 +83,7 @@ body{
 
 //BEGIN -- scope trang
 %container-1000{
-    width: 1026px;
+    width: 1366px;
     margin: 0 auto;
 }
 // .container-1000{
@@ -117,6 +122,7 @@ body{
         .flex-top{
             @include flex-rowORcol(row){
                 justify-content: space-between;
+                align-items: center;
             };
             margin-top: 1.5em;
             .flex-item-1{
@@ -135,7 +141,7 @@ body{
         .logo{
             .t-logo{
                 width: 100px;
-                background-image: url('../../img/logo-mp-3.svg');
+                background-image: url('../../image-main-page/logo-mp-3.svg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -147,13 +153,11 @@ body{
         }
         .header-search{
             .f-top-search{
-                margin: 0 auto;
                 border: 1px solid rgba(255,255,255,.1);
-                border-radius: 20px;
+                border-radius: 30px;
                 background-color: #281944;
                 span{  
                     font-size: 1em;
-                    
                     a{
                         i{
                             cursor: pointer;
@@ -168,6 +172,8 @@ body{
                         border: none;
                         background-color: transparent;
                         color: rgba(219,219,219,.5);
+                        padding: 5px 0 5px 10px;
+                        font-size: 1em;
                         &:focus{
                             outline: none;
                         }
@@ -235,7 +241,7 @@ body{
                     }
                     span{
                         margin-left: .5em;
-                        font-size: .7em;
+                        font-size: .9em;
                         font-weight: 600;
                         color: #fff;
                     }
@@ -254,19 +260,21 @@ body{
                 line-height: 50px;
                 .t-item-menu{
                     cursor: pointer;
-                    font-size: .9em;
+                    font-size: 1.2em;
                     text-decoration: none;
                     color: #6e55b4;
                     font-weight: 600;
-                    margin-left: .7em;
+                    text-transform: uppercase;
                     +.t-item-menu{
                         color: #fff;
+                        margin-left: 1.7em;
                     }
                     &:hover{
                         color: #6e55b4;
                     }
                 }
                 .t-vip{
+                    @extend %hiden-a;
                     width: 50px;
                     height: 25px;
                     background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v0.1.28/images/VIP-1x.svg) ;
@@ -276,7 +284,6 @@ body{
         }
     }
 }
-
 // home
 .t-main{
     display: block; 
@@ -285,28 +292,34 @@ body{
     background-color: #0D021A;
     .container-1000{@extend %container-1000}
     .sec-slide-big{
-        .silder{
+        width: 100%;
+        a{
             width: 100%;
-            scroll-behavior: none;
+            display: block;
             img{
                 max-width: 100%;
+                display: block;
             }
         }
     }
+
     .sec-login{
         .t-sec-login{
             background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v0.1.28/images/banner-bg.svg);
             @extend %t-bg-img;
-            height: 70px;
-            line-height: 70px;
+            height: 100px;
+            line-height: 100px;
             margin-top: 2em;
             .flex-login-body{
+                width: 80%;
+                margin: 0 auto;
                 @include flex-rowORcol(row){
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
                 };
                 .ic-mp3{
                     background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v0.1.28/images/logo-mp-3.png);
+                    @extend %hiden-a;
                     @extend %t-bg-img;
                     display: block;
                     width: 50px;
@@ -316,12 +329,14 @@ body{
                 .txt-advide{
                     color: #fff;
                     display: block;
-                    font-size: 1em;
+                    font-size: 1.4em;
                     font-weight: 600;
                     margin-right:100px;
                 }
                 .btn-login{
                     background-color: #fdd100;
+                    font-size: 1.1em;
+                    text-transform: uppercase;
                     &:hover{
                         background-color: #fff;
                         color: #6e55b4;
@@ -397,14 +412,15 @@ body{
             };
             margin-top: 45px;
             .chart-col-left{
-                flex-basis: 700px;
+                flex-basis: 966px;
             }
             .chart-col-right{
-                flex-basis: 326px;
+                flex-basis: 400px;
             }
             .t-chart-realtime{
                 display: block;
-                height: 380px;
+                height: 479px;
+                @extend %t-bg-img;
                 background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v0.1.28/images/bg-chart.jpg);
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
@@ -465,7 +481,7 @@ body{
             }
             .t-list-song{
                 display: block;
-                height: 380px;
+                height: 479px;
                 background-image: url(https://zjs.zadn.vn/zmp3-desktop/releases/v0.1.28/images/bg-chart.svg);
                 @extend %t-bg-img;
                 border-top-right-radius: 5px;
@@ -508,7 +524,7 @@ body{
                             }
                         }
                         .t-number{
-                            font-size: 1.3em;
+                            font-size: 1.7em;
                             margin-top: 14px;
                             cursor: default;
                         }
@@ -527,11 +543,11 @@ body{
                                 align-items: center;
                                 align-content: center;
                             };
-                            margin-left: 10px;
+                            margin-left: 20px;
                             line-height: 0;
                             .image-singer{
                                 position: relative;
-                                flex-basis: 50px;
+                                flex-basis: 70px;
                                 img{
                                     display: inline-block;
                                     border-radius: 7px;
@@ -553,19 +569,17 @@ body{
                             }
                             .t-song{
                                 margin-left: 10px;
-                                display: flex;
-                                flex-flow: column wrap ;
                                 .name-song{
                                     cursor: default;
                                     a{
-                                        font-size: 13px;
+                                        font-size: 1.1em;
                                         color: #fff;
                                         font-weight: 700;
                                     }
                                 }
                                 .t-singer{
-                                    font-size: 11px;
-                                    padding-top: 20px;
+                                    font-size: 1em;
+                                    margin-top: 30px;
                                     a{
                                         color: #fff;
                                         &:hover{
@@ -576,9 +590,9 @@ body{
                             }
                         }
                         .t-percent{
-                            font-size: 13px;
+                            font-size: 1.3em;
                             cursor: default;
-                            margin-top: 14px;
+                            margin: 14px 0 0 15px;
                         }
                     }
                     .t-all{
@@ -586,7 +600,7 @@ body{
                         text-align: center;
                         a{
                             color: #fff;
-                            font-size: 13px;
+                            font-size: 1.1em;
                         }
                     }
                 }
@@ -652,44 +666,6 @@ body{
                                     justify-content: space-between;
                                     align-items: center;
                                 }
-                                .avatar{
-                                    border-radius: 50%;
-                                    a{
-                                        img{
-                                            border-radius: 50%;
-                                        }
-                                    }
-                                    &:hover{
-                                        .t-avatar{
-                                            a{
-                                                img{
-                                                    transform: scale(1.1);
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                }
-                                .avatar-issue{
-                                    border-radius: 15px;
-                                    a{
-                                        img{
-                                            border-radius: 15px;
-                                        }
-                                    }
-                                    &:hover{
-                                        .t-avatar{
-                                            a{
-                                                img{
-                                                    transform: scale(1.1);
-                                                }
-                                            }
-                                            .t-opacity{
-                                                display: block;
-                                            }
-                                        }
-                                    }
-                                }
                                 .avatar,.avatar-issue{
                                     flex-basis: 120px;
                                     overflow: hidden;
@@ -731,9 +707,55 @@ body{
                                         
                                     }
                                 }
+                                // begin slider no number rank
+                                .avatar{
+                                    border-radius: 50%;
+                                    a{
+                                        img{
+                                            border-radius: 50%;
+                                        }
+                                    }
+                                    &:hover{
+                                        .t-avatar{
+                                            a{
+                                                img{
+                                                    transform: scale(1.1);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                                .t-caption{
+                                    margin-right: 1em;
+                                    text-align: right;
+                                    .btn-zingchoice{
+                                        padding: 2px 7px;
+                                        border-radius: 5px;
+                                        background: linear-gradient(to right,#f508b7,#9102ff);
+                                        color: #fff;
+                                        font-size: 12px;
+                                        font-weight: 700;
+                                        i{
+                                            font-size: 11px;
+                                        }
+                                        span{
+                                            padding-left: 5px;
+                                        }
+                                    }
+                                    .t-bot{
+                                        padding-top: 1em;
+                                    }
+                                    .t-name{
+                                        font-size: 18px;
+                                        font-weight: 600;
+                                        color: #fff;
+                                    }
+                                }
+                                // slider have number rank
                                 .new-issue-caption{
                                     text-align: left;
-                                    margin-right: 1em;
+                                    padding-left: 15px;
                                     .song-singer-top{
                                         margin-bottom: 22px;
                                         .song{
@@ -766,39 +788,37 @@ body{
                                         }
                                         .rank-time-now{
                                             display: inline-block;
-                                            padding-left: 9px;
+                                            padding-left: 39px;
                                             a{
                                                 color:#a0a0a0;
                                             }
                                         }
                                     }
                                 }
-                                .t-caption{
-                                    margin-right: 1em;
-                                    text-align: right;
-                                    .btn-zingchoice{
-                                        padding: 2px 7px;
-                                        border-radius: 5px;
-                                        background: linear-gradient(to right,#f508b7,#9102ff);
-                                        color: #fff;
-                                        font-size: 12px;
-                                        font-weight: 700;
-                                        i{
-                                            font-size: 11px;
-                                        }
-                                        span{
-                                            padding-left: 5px;
+                                .avatar-issue{
+                                    border-radius: 15px;
+                                    a{
+                                        img{
+                                            border-radius: 15px;
                                         }
                                     }
-                                    .t-bot{
-                                        padding-top: 1em;
-                                    }
-                                    .t-name{
-                                        font-size: 18px;
-                                        font-weight: 600;
-                                        color: #fff;
+                                    &:hover{
+                                        .t-avatar{
+                                            a{
+                                                img{
+                                                    transform: scale(1.1);
+                                                }
+                                            }
+                                            .t-opacity{
+                                                display: block;
+                                            }
+                                        }
                                     }
                                 }
+                                .caption-issue{
+                                    flex-grow: 1;
+                                }
+
                             }
 
                         }
@@ -812,23 +832,15 @@ body{
         width: 100%;
         .t-table{
             margin-top: 2em;
-            @include flex-rowORcol(row){
-                justify-content:start;
-            }
-            .t-col-4{
-                flex-basis: 342px;
-                +.t-col-4{
-                    padding-left: 1em;
-                }
-            }
             .new-song-list{
-                @include flex-rowORcol(column){
-                    justify-content: start;
-                };
+                display: grid;
+                grid-template-columns: repeat(3,455.2px);
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
                 .new-song-item{
+                    padding: 10px;
                     cursor: default;
                     position: relative;
-                    padding: 10px;
                     z-index: 887;
                     &:hover{
                         .content-song{
@@ -866,8 +878,6 @@ body{
                     }
                     .content-song{
                         z-index: 555;
-                        height: 40px;
-                        width: 100%;
                         flex-wrap: nowrap;
                         @include flex-rowORcol(row){
                             justify-content: space-between;
@@ -875,6 +885,7 @@ body{
                         }
                     }
                     .t-img-sing{
+                        flex-basis: 70px;
                         width: 40px;
                         border-radius: 5px;
                         position: relative;
@@ -893,7 +904,7 @@ body{
                             transform: translate(-50%, -50%);
                             a{
                                 color: #fff;
-                                font-size: 11px;
+                                font-size: 1.1em;
                             }
                         }
                     }
@@ -903,9 +914,9 @@ body{
                     }
                     .t-name-song{
                         .t-song{
-                            padding-bottom: 5px;
+                            padding-bottom: 15px;
                             a{
-                                font-size: 15px;
+                                font-size: 1.3em;
                                 font-weight: 700;
                                 cursor: default;
                             }
@@ -913,7 +924,7 @@ body{
                         .t-sing{
                             cursor: pointer;
                             a{
-                                font-size: 13px;
+                                font-size: 1.1em;
                             }
                         }
                     }
@@ -929,28 +940,29 @@ body{
                         }
                         .t-mic{
                             @extend %display-inline-block;
-                            width: 30px;
-                            height:30px;
-                            line-height: 30px;
+                            width: 40px;
+                            height:40px;
+                            line-height: 40px;
                             text-align: center;
+                            margin-right: 10px;
                             &:hover{
                                 border-radius: 50%;
                                 background-color:rgba(255,255,255,.101961);
                             }
                             a{
                                 color: #fff;
-                                font-size: 11px;
+                                font-size: 1.1em;
                             }
                         }
                         .t-extend{
                             @extend %display-inline-block;
-                            width:30px;
-                            height:30px;
-                            line-height: 30px;
+                            width:40px;
+                            height:40px;
+                            line-height: 40px;
                             text-align: center;
                             a{
                                 color: #fff;
-                                font-size: 11px;
+                                font-size: 1.1em;
                             }
                             &:hover{
                                 border-radius: 50%;
