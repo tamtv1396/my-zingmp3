@@ -1,0 +1,37 @@
+[
+    {
+        "id":0,
+        "pathSinger":"/singer",
+        "imgSinger":"https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/4/e/0/6/4e06553d094c479a2d93729c631e0c05.jpg",
+        "pathSong":"/song/Talk About Love",
+        "nameSong":"Talk About Love"
+    },
+    {
+        "id":1,
+        "pathSinger":"/singer",
+        "imgSinger":"https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/4/e/0/6/4e06553d094c479a2d93729c631e0c05.jpg",
+        "pathSong":"/song/Talk About Love",
+        "nameSong":"Talk About Love"
+    },
+    {
+        "id":2,
+        "pathSinger":"/singer",
+        "imgSinger":"https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/4/e/0/6/4e06553d094c479a2d93729c631e0c05.jpg",
+        "pathSong":"/song/Talk About Love",
+        "nameSong":"Talk About Love"
+    },
+    {
+        "id":3,
+        "pathSinger":"/singer",
+        "imgSinger":"https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/4/e/0/6/4e06553d094c479a2d93729c631e0c05.jpg",
+        "pathSong":"/song/Talk About Love",
+        "nameSong":"Talk About Love"
+    },
+    {
+        "id":4,
+        "pathSinger":"/singer",
+        "imgSinger":"https://photo-resize-zmp3.zadn.vn/w480_r1x1_jpeg/cover/4/e/0/6/4e06553d094c479a2d93729c631e0c05.jpg",
+        "pathSong":"/song/Talk About Love",
+        "nameSong":"Talk About Love"
+    }
+]

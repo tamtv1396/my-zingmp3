@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "menutop":"trang chủ"
+    },
+    {
+        "id":2,
+        "menutop":"zingchart"
+    },
+    {
+        "id":3,
+        "menutop":"Mới phát hành"
+    },
+    {
+        "id":4,
+        "menutop":"Top 100"
+    },
+    {
+        "id":5,
+        "menutop":"Chủ đề"
+    },
+    {
+        "id":6,
+        "menutop":"MV"
+    },
+    {
+        "id":7,
+        "menutop":"allbum"
+    },
+    {
+        "id":8,
+        "menutop":"Nghệ sĩ"
+    },
+    {
+        "id":9,
+        "menutop":"Nhạc cá nhân"
+    }
+]
