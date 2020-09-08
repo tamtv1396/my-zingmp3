@@ -1,0 +1,47 @@
+[
+    {
+        "id": 0,
+        "menutitle": "trang chủ",
+        "path": "/"
+    },
+    {
+        "id": 1,
+        "menutitle": "#zingchart",
+        "path": "/zingchart"
+    },
+    {
+        "id": 2,
+        "menutitle": "mới phát hành ",
+        "path": "/moi-phat-hanh"
+    },
+    {
+        "id": 3,
+        "menutitle": "top 100",
+        "path": "/top100"
+    },
+    {
+        "id": 4,
+        "menutitle": "chủ đề ",
+        "path": "/chu-de"
+    },
+    {
+        "id": 5,
+        "menutitle": "mv",
+        "path": "/mv"
+    },
+    {
+        "id": 6,
+        "menutitle": "allbum",
+        "path": "/allbum"
+    },
+    {
+        "id": 7,
+        "menutitle": "nghệ sĩ",
+        "path": "/nghe-si"
+    },
+    {
+        "id": 8, 
+        "menutitle": "nhạc cá nhân",
+        "path": "/nhac-ca-nhan"
+    }
+]
